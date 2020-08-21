@@ -64,11 +64,7 @@ if ( $con->connect_errno ) {
         $r5 = $con->query( $q5 );
 
 
-        if ($r4->num_rows == 0){
-			$resume = "COMING SOON";	
-		}elseif( $r4->num_rows == $r5->num_rows ){
-			$resume = "COMPLETED";		
-		}			
+        if ( $r4->num_rows == $r5->num_rows )$resume = "COMPLETED";		  
 		  
 		  
         echo "<p><a href='?co=" . $row->coid . "'>" . $row->coname . "</a> ".$resume."</p>";
