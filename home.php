@@ -65,7 +65,7 @@ if ( $con->connect_errno ) {
 
 
         if ($r4->num_rows == 0){
-			$resume = "COMING SOON";	
+			$resume = "COMING SOON!";	
 		}elseif( $r4->num_rows == $r5->num_rows ){
 			$resume = "COMPLETED";		
 		}			
